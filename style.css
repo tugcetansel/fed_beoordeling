@@ -294,6 +294,7 @@ footer ul li:hover {
     font-family: 'Poppins', sans-serif;
     margin-top: 2em;
     width: 20em;
+    border: solid white;
 }
 
 .logintitle {
@@ -340,13 +341,26 @@ footer ul li:hover {
     background-color: white;
 }
 
+.likebutton:hover {
+  -webkit-transform: scale(2);
+  -moz-transform: scale(2);
+  -ms-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
+  -webkit-animation:2s;
+  -moz-animation:none;
+  -ms-animation:'';
+  -o-animation:'';
+  animation:'';
+}
+
+}
 .popup {
   position: relative;
   display: inline-block;
   cursor: pointer;
 }
 
-/* The actual popup (appears on top) */
 .popup .popuptext {
   visibility: hidden;
   width: 160px;
@@ -362,6 +376,18 @@ footer ul li:hover {
   margin-left: -80px;
 }
 
+.formhold:invalid {
+  background: rgba(255,0,0,.1);
+  /background: rgba(255,255,0,.8);;
+}
+
+.formhold:valid {
+  background-color: forestgreen
+}
+
+.formhold:invalid .loginbutton{
+  display:none;
+}
 
 
 
@@ -379,13 +405,10 @@ footer ul li:hover {
 
     }
 
-    form.search {
-        display: none;
-    }
-}
 
 
-@media screen and (max-width: 40em) {
+
+@media screen and (max-width: 50em) {
     .column2,
     .column2pic,
     .column1,
@@ -396,6 +419,17 @@ footer ul li:hover {
     .imglong {
         content: url(images/longpic2.jpg);
 
+    }
+    
+        form.search {
+        display: block;
+        width:6em;
+        margin: 0 auto;
+    }
+    
+    .searchbutton{
+        width: 108%;
+        border: 2em;
     }
 }
 
